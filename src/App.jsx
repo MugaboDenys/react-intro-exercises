@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleClick = () =>{
+    window.alert("Clicked!")
+  }
 
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="h-screen flex items-center justify-center">
+      <button onClick={handleClick} className="py-2 px-4 border-2 border-black rounded">Click Me</button>
     </div>
   )
 }
