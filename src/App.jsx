@@ -1,10 +1,6 @@
-import './App.css'
+const App = () => {
 
-function App() {
-
-  const handleClick = () =>{
-    window.alert("Clicked!")
-  }
+  const handleClick = () => window.alert("Clicked!")
 
   const genLinks = () =>{
     let arr = []
