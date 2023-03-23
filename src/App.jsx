@@ -1,17 +1,7 @@
-import { useState } from "react"
-
 const App = () => {
-  const [name, setName] = useState({firstname: "", lastname: ""})
 
-  const handleClick = () => window.alert(` Helloo ${name.firstname} ${name.lastname}!`)
-  const handleInputs = (event) =>{
-    setName(prevName=>{
-      return {
-        ...prevName,
-        [event.target.name] : event.target.value
-      }
-    })
-  }
+  const handleClick = () => window.alert("Clicked!")
+
   const genLinks = () =>{
     let arr = []
     for(let i = 0; i< 10; i++){
@@ -19,6 +9,7 @@ const App = () => {
     }
     return arr;
   }
+
   const array = genLinks()
   return (
     <div className="h-screen flex flex-col items-center ">
@@ -27,11 +18,7 @@ const App = () => {
           <a key={index} href={item.link} className={`px-2 underline underline-offset-4 ${!index == 0 && "border-indigo-600 border-l"} text-indigo-600 `} >{index == 0 ? "Home" : item.text}</a>
         ))}
       </div>
-      <div className="flex flex-col mt-10 gap-y-5">
-        <input type="text" onChange={handleInputs} name="firstname" className="border-2 rounded px-3 w-72" placeholder="firstname"/>
-        <input type="text" onChange={handleInputs} name="lastname" className="border-2 rounded px-3 w-72" placeholder="lastname"/>
-        <button onClick={handleClick} className="btn ">Greet Me</button>
-      </div>
+      <button onClick={handleClick} className="py-2 px-4 border-2 mt-64 border-black rounded">Click Me</button>
     </div>
   )
 }
