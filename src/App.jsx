@@ -28,8 +28,8 @@ const App = () => {
         ))}
       </div>
       <div className="flex flex-col mt-10 gap-y-5">
-        <input type="text" onChange={handleInputs} name="firstname" className="border-2 rounded px-3 w-72" placeholder="firstname"/>
-        <input type="text" onChange={handleInputs} name="lastname" className="border-2 rounded px-3 w-72" placeholder="lastname"/>
+        <input type="text" value={name.firstname} onChange={handleInputs} name="firstname" className="border-2 rounded px-3 w-72" placeholder="firstname"/>
+        <input type="text" value={name.lastname} onChange={handleInputs} name="lastname" className="border-2 rounded px-3 w-72" placeholder="lastname"/>
         <button onClick={handleClick} className="btn ">Greet Me</button>
       </div>
     </div>
