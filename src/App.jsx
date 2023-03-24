@@ -2,13 +2,8 @@ import { useRef } from 'react'
 import './App.css'
 import Button from './components/Button'
 
-function App() {
+const App = () => {
 
-  const buttonRef = useRef(null)
-
-  const handleClick = () =>{
-    window.alert(`You clicked ${buttonRef.current.textContent}`)
-  }
   const genLinks = () =>{
     let arr = []
     for(let i = 0; i< 10; i++){
