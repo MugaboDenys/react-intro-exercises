@@ -2,10 +2,6 @@ import Card from "./components/Card"
 import data from "./data"
 
 const App = () => {
-
-  const handleClick = () => window.alert("Clicked!")
-
-
   const genLinks = () =>{
     let arr = []
     for(let i = 0; i< 10; i++){
@@ -24,7 +20,7 @@ const App = () => {
       </div>
       <div className="w-[40rem] p-5 h-72 mt-20 bg-[#dff8db] flex gap-5 items-center rounded-md">
         {data.map(item=>(
-          <Card key={item.id} setup={item.setup} punchline={item.punchline} />
+          <Card key={item.id} {...item} />
         ))}
       </div>
     </div>
