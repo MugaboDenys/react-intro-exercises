@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+const App = () => {
   const [times, setTimes] = useState(0)
 
-  const handleClick = () =>setTimes(prevTime => prevTime + 1)
+  const handleClick = () =>(setTimes(prevTime => prevTime + 1))
 
   const genLinks = () =>{
     let arr = []
