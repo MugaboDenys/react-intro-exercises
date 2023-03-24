@@ -3,7 +3,7 @@ import { useRef } from "react";
 const Button = ({children}) => {
     const buttonRef = useRef(null);
 
-  function handleClick() {
+  const handleClick = () => {
     window.alert(`You clicked ${buttonRef.current.textContent}`);
   }
     return ( 
