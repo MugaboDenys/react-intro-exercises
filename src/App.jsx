@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import Card from "./components/Card"
-import data from "./data"
 
 const App = () => {
   const [count, setCount] = useState(0)
   const [usersData, setUsersData] = useState([])
+
   useEffect(()=>{
     async function getData(){
       try {
@@ -13,7 +13,6 @@ const App = () => {
         const data = await res.json()
         let array = []
         data.forEach(user=> array.push({image: user.avatar, fname : user.first_name, lname : user.last_name, employment:user.employment}))
-        console.log(array);
         setUsersData(array)
       } catch (error) {
         console.error(error);
