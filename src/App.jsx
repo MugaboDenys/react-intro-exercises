@@ -1,7 +1,7 @@
 import './App.css'
 import Item from './components/Item';
 
-function App() {
+const App = () => {
 
   const genLinks = () =>{
     let arr = []
